@@ -8,3 +8,8 @@ class SimilarityChecker:
 
         if longer_length == shorter_length:
             return 60
+
+        gap = longer_length - shorter_length
+
+        return (1 - gap / shorter_length) * 60
+
