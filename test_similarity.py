@@ -25,7 +25,7 @@ class TestSimilarityChecker(TestCase):
 
     def test_all_same_alphabets(self):
         self.examine_alphabets("ASD", "DSA", 40)
-        # self.examine_alphabets("AAABB", "BAA", 40)
+        self.examine_alphabets("AAABB", "BAA", 40)
 
     def test_all_diff_alphabets(self):
         self.examine_alphabets("A", "BB", 0)
