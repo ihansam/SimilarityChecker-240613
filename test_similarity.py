@@ -7,5 +7,5 @@ class TestSimilarityChecker(TestCase):
     def setUp(self):
         self.checker = SimilarityChecker()
 
-    def test_string_length(self):
-        pass
+    def test_same_length(self):
+        self.assertEqual(60, self.checker.examine_length_score("ASD", "DSA"))
