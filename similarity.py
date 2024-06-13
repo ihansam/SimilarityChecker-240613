@@ -14,4 +14,4 @@ class SimilarityChecker:
     def examine_alphabet_score(self, string1: str, string2: str) -> float:
         alphabets1, alphabets2 = set(string1.upper()), set(string2.upper())
         same_cnt, total_cnt = len(alphabets1 & alphabets2), len(alphabets1 | alphabets2)
-        return (same_cnt / total_cnt) * 40
+        return (same_cnt / total_cnt) * self.ALPHA_MAX_SCORE
