@@ -1,2 +1,2 @@
 # SimilarityChecker-240613
-진기단
+문자열 유사도
