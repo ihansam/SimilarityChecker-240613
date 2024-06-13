@@ -19,3 +19,16 @@ class TestSimilarityChecker(TestCase):
     def test_less_than_2x_length(self):
         self.examine_length("AAABB", "BAA", 20)
         self.examine_length("AA", "AAE", 30)
+
+    def examine_alphabets(self, str1, str2, expected_score):
+        self.assertAlmostEqual(expected_score, self.checker.examine_alphabet_score(str1, str2), delta=1e-14)
+
+    def test_all_same_alphabets(self):
+        self.examine_alphabets("ASD", "DSA", 40)
+        # self.examine_alphabets("AAABB", "BAA", 40)
+
+    def test_all_diff_alphabets(self):
+        self.examine_alphabets("A", "BB", 0)
+
+    def test_similar_alphabets(self):
+        self.examine_alphabets("AA", "AAE", 20)
